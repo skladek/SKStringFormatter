@@ -1,0 +1,6 @@
+framework module Pods_SKStringFormatter {
+  umbrella header "Pods-SKStringFormatter-umbrella.h"
+
+  export *
+  module * { export * }
+}

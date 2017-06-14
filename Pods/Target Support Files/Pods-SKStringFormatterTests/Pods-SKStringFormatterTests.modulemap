@@ -1,0 +1,6 @@
+framework module Pods_SKStringFormatterTests {
+  umbrella header "Pods-SKStringFormatterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
