@@ -30,7 +30,6 @@
 		14810BA51EF1D212005F537B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14810BA61EF1D212005F537B /* SKStringFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKStringFormatter.h; sourceTree = "<group>"; };
 		14810BA81EF1D212005F537B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14810BCD1EF1D345005F537B /* SKStringFormatter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SKStringFormatter.xcodeproj; sourceTree = "<group>"; };
 		5D24615C5F50A8BF3B083B03 /* Pods-SKStringFormatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.release.xcconfig"; sourceTree = "<group>"; };
 		AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80AF9EFABFA0E540C8E3858 /* Pods-SKStringFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		14810B801EF1D17C005F537B = {
 			isa = PBXGroup;
 			children = (
-				14810BCD1EF1D345005F537B /* SKStringFormatter.xcodeproj */,
 				14810BA41EF1D212005F537B /* Source */,
 				14810BA71EF1D212005F537B /* Tests */,
 				14810B8B1EF1D17C005F537B /* Products */,
@@ -95,13 +93,6 @@
 				14810BA81EF1D212005F537B /* Info.plist */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		14810BCE1EF1D345005F537B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		82E226C5FF0E0EFC086CB4C6 /* Frameworks */ = {
@@ -211,12 +202,6 @@
 			mainGroup = 14810B801EF1D17C005F537B;
 			productRefGroup = 14810B8B1EF1D17C005F537B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 14810BCE1EF1D345005F537B /* Products */;
-					ProjectRef = 14810BCD1EF1D345005F537B /* SKStringFormatter.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				14810B891EF1D17C005F537B /* SKStringFormatter */,
