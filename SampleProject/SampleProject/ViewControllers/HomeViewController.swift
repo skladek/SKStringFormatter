@@ -18,8 +18,10 @@ class HomeViewController: UIViewController {
 
     init() {
         var stringFormat = StringFormat()
-        stringFormat.maxLength = 5
+        stringFormat.maxLength = 9
         stringFormat.allowedCharacterSet = CharacterSet.decimalDigits
+        stringFormat.formatStrings = [FormatString(string: "-", startIndex: 3), FormatString(string: "-", startIndex: 5)]
+
         stringFormatter = StringFormatter(stringFormat: stringFormat)
 
         super.init(nibName: nil, bundle: nil)

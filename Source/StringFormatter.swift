@@ -37,8 +37,31 @@ public class StringFormatter: Formatter {
         var formattedString = string
         formattedString = trimDisallowedCharacters(formattedString)
         formattedString = trimToMaxLength(formattedString)
+        formattedString = insertFormatStrings(formattedString)
 
         return formattedString
+    }
+
+    func insertFormatStrings(_ inputString: String) -> String {
+        guard let formatStrings = stringFormat.formatStrings else {
+            return inputString
+        }
+
+        var outputString = inputString
+        var addedCharactersCount: UInt = 0
+        for formatString in formatStrings {
+            let stringStartIndex = outputString.startIndex
+            let stringEndIndex = outputString.endIndex
+            let offset = Int(formatString.startIndex + addedCharactersCount)
+            if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex) {
+                for character in formatString.string.characters {
+                    outputString.insert(character, at: insertionIndex)
+                    addedCharactersCount += 1
+                }
+            }
+        }
+
+        return outputString
     }
 
     func trimDisallowedCharacters(_ inputString: String) -> String {
