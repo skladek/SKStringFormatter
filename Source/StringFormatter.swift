@@ -33,10 +33,24 @@ public class StringFormatter: Formatter {
         }
 
         editingString = string
+
         var formattedString = string
+        formattedString = trimDisallowedCharacters(formattedString)
         formattedString = trimToMaxLength(formattedString)
 
         return formattedString
+    }
+
+    func trimDisallowedCharacters(_ inputString: String) -> String {
+        guard let characterSet = stringFormat.allowedCharacterSet else {
+            return inputString
+        }
+
+        let invertedCharacterSet = characterSet.inverted
+        let stringComponents = inputString.components(separatedBy: invertedCharacterSet)
+        let outputString = stringComponents.joined(separator: "")
+
+        return outputString
     }
 
     func trimToMaxLength(_ inputString: String) -> String {
@@ -44,7 +58,8 @@ public class StringFormatter: Formatter {
             return inputString
         }
 
-        let endIndex = inputString.index(inputString.startIndex, offsetBy: stringFormat.maxLength)
+        let stringStartIndex = inputString.startIndex
+        let endIndex = inputString.index(stringStartIndex, offsetBy: stringFormat.maxLength)
         let outputString = inputString.substring(to: endIndex)
 
         return outputString

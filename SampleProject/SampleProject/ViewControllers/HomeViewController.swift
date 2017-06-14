@@ -17,7 +17,9 @@ class HomeViewController: UIViewController {
     let stringFormatter: StringFormatter
 
     init() {
-        let stringFormat = StringFormat(maxLength: 5)
+        var stringFormat = StringFormat()
+        stringFormat.maxLength = 5
+        stringFormat.allowedCharacterSet = CharacterSet.decimalDigits
         stringFormatter = StringFormatter(stringFormat: stringFormat)
 
         super.init(nibName: nil, bundle: nil)

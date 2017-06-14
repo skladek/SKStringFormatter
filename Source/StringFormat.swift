@@ -9,9 +9,11 @@
 import Foundation
 
 public struct StringFormat {
-    let maxLength: Int
+    public var allowedCharacterSet: CharacterSet?
+    public var maxLength: Int
 
-    public init(maxLength: Int = NSIntegerMax) {
-        self.maxLength = maxLength
+    public init() {
+        self.allowedCharacterSet = nil
+        self.maxLength = NSIntegerMax
     }
 }
