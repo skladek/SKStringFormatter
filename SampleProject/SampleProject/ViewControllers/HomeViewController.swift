@@ -6,30 +6,34 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
+import SKStringFormatter
 import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
 
-        // Do any additional setup after loading the view.
-    }
+    let stringFormatter: StringFormatter
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    init() {
+        let stringFormat = StringFormat(maxLength: 5)
+        stringFormatter = StringFormatter(stringFormat: stringFormat)
+
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
 
+    @IBAction func dismissKeyboard() {
+        textField.resignFirstResponder()
+    }
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        label.text = stringFormatter.string(for: textField.text)
+    }
 }

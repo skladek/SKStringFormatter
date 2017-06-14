@@ -10,9 +10,10 @@
 		14810BE71EF1D733005F537B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BE01EF1D733005F537B /* AppDelegate.swift */; };
 		14810BE81EF1D733005F537B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14810BE11EF1D733005F537B /* Assets.xcassets */; };
 		14810BE91EF1D733005F537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14810BE21EF1D733005F537B /* LaunchScreen.storyboard */; };
-		14810BEB1EF1D733005F537B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14810BE61EF1D733005F537B /* Info.plist */; };
 		14810BF31EF1D76B005F537B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BF11EF1D76B005F537B /* HomeViewController.swift */; };
 		14810BF41EF1D76B005F537B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14810BF21EF1D76B005F537B /* HomeViewController.xib */; };
+		14810BF91EF1DC35005F537B /* SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14810BD61EF1D36C005F537B /* SKStringFormatter.framework */; };
+		14810BFA1EF1DC35005F537B /* SKStringFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14810BD61EF1D36C005F537B /* SKStringFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,28 @@
 			remoteGlobalIDString = 14810B931EF1D17C005F537B;
 			remoteInfo = SKStringFormatterTests;
 		};
+		14810BFB1EF1DC35005F537B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14810BD01EF1D36B005F537B /* SKStringFormatter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 14810B891EF1D17C005F537B;
+			remoteInfo = SKStringFormatter;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14810BFD1EF1DC35005F537B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14810BFA1EF1DC35005F537B /* SKStringFormatter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14810BB81EF1D331005F537B /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14810BF91EF1DC35005F537B /* SKStringFormatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +136,12 @@
 				14810BB41EF1D331005F537B /* Sources */,
 				14810BB51EF1D331005F537B /* Frameworks */,
 				14810BB61EF1D331005F537B /* Resources */,
+				14810BFD1EF1DC35005F537B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				14810BFC1EF1DC35005F537B /* PBXTargetDependency */,
 			);
 			name = SampleProject;
 			productName = SampleProject;
@@ -186,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14810BEB1EF1D733005F537B /* Info.plist in Resources */,
 				14810BF41EF1D76B005F537B /* HomeViewController.xib in Resources */,
 				14810BE81EF1D733005F537B /* Assets.xcassets in Resources */,
 				14810BE91EF1D733005F537B /* LaunchScreen.storyboard in Resources */,
@@ -206,6 +230,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14810BFC1EF1DC35005F537B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SKStringFormatter;
+			targetProxy = 14810BFB1EF1DC35005F537B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		14810BE21EF1D733005F537B /* LaunchScreen.storyboard */ = {
@@ -315,6 +347,7 @@
 		14810BCB1EF1D331005F537B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
@@ -328,6 +361,7 @@
 		14810BCC1EF1D331005F537B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
