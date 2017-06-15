@@ -29,10 +29,8 @@ class Encoder: Encoding {
         var outputString = inputString
         var addedCharactersCount: UInt = 0
         for formatString in formatStrings {
-            let stringStartIndex = outputString.startIndex
-            let stringEndIndex = outputString.endIndex
             let offset = Int(formatString.startIndex + addedCharactersCount)
-            if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex),
+            if let insertionIndex = outputString.index(outputString.startIndex, offsetBy: offset, limitedBy: outputString.endIndex),
                 inputString.characters.count >= Int(formatString.displaysAt) {
                 for character in formatString.string.characters.reversed() {
                     outputString.insert(character, at: insertionIndex)
