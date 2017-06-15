@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		142B564F1EF3268E00FCAF4E /* FormattedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B564E1EF3268E00FCAF4E /* FormattedTextField.swift */; };
+		142B56551EF33F2800FCAF4E /* FormattedTextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B56541EF33F2800FCAF4E /* FormattedTextFieldSpec.swift */; };
 		1432CAD31EF2D94E003D6688 /* StringFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD11EF2D8E9003D6688 /* StringFormatterSpec.swift */; };
 		1432CAD61EF2D9EA003D6688 /* MockStringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD41EF2D985003D6688 /* MockStringFormat.swift */; };
 		1432CAD81EF2DC46003D6688 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD71EF2DC46003D6688 /* Encoder.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		142B564E1EF3268E00FCAF4E /* FormattedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedTextField.swift; sourceTree = "<group>"; };
+		142B56541EF33F2800FCAF4E /* FormattedTextFieldSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedTextFieldSpec.swift; sourceTree = "<group>"; };
 		1432CAD11EF2D8E9003D6688 /* StringFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatterSpec.swift; sourceTree = "<group>"; };
 		1432CAD41EF2D985003D6688 /* MockStringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStringFormat.swift; sourceTree = "<group>"; };
 		1432CAD71EF2DC46003D6688 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				1432CADC1EF2F2F0003D6688 /* EncoderSpec.swift */,
 				14A0AD3B1EF25B4800F9777D /* FormatStringSpec.swift */,
+				142B56541EF33F2800FCAF4E /* FormattedTextFieldSpec.swift */,
 				14A0AD3C1EF25B4800F9777D /* Info.plist */,
 				1432CAD91EF2E305003D6688 /* MockEncoder.swift */,
 				1432CAD41EF2D985003D6688 /* MockStringFormat.swift */,
@@ -372,6 +375,7 @@
 				1432CAD31EF2D94E003D6688 /* StringFormatterSpec.swift in Sources */,
 				1432CADE1EF2F304003D6688 /* EncoderSpec.swift in Sources */,
 				14A0AD441EF25B5200F9777D /* FormatStringSpec.swift in Sources */,
+				142B56551EF33F2800FCAF4E /* FormattedTextFieldSpec.swift in Sources */,
 				1432CADB1EF2E3D1003D6688 /* MockEncoder.swift in Sources */,
 				1432CAD61EF2D9EA003D6688 /* MockStringFormat.swift in Sources */,
 			);
