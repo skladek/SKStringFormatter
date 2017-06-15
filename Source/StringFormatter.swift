@@ -104,8 +104,6 @@ extension StringFormatter: UITextFieldDelegate {
                 let rangeStartIndex = outputString.index(endIndex, offsetBy: -1)
                 let range = rangeStartIndex..<endIndex
                 outputString = outputString.replacingCharacters(in: range, with: "")
-            } else if outputString.characters.count >= stringFormat.maxLength {
-                return false
             } else if string.rangeOfCharacter(from: stringFormat.allowedCharacterSet ?? CharacterSet().inverted) != nil {
                 outputString.append(string)
             }
