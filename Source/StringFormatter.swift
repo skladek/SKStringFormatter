@@ -9,18 +9,28 @@
 import UIKit
 
 public class StringFormatter: Formatter {
-    fileprivate var editingString: String?
+    var editingString: String = ""
 
-    fileprivate let stringFormat: StringFormat
+    let encoder: Encoding
+
+    let stringFormat: StringFormat
 
     public init(stringFormat: StringFormat) {
         self.stringFormat = stringFormat
+        self.encoder = StringEncoder(stringFormat: stringFormat)
 
         super.init()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+    init(encoder: Encoding, format: StringFormat) {
+        self.encoder = encoder
+        self.stringFormat = format
+
+        super.init()
     }
 
     public override func editingString(for obj: Any) -> String? {
@@ -35,58 +45,11 @@ public class StringFormatter: Formatter {
         editingString = string
 
         var formattedString = string
-        formattedString = trimDisallowedCharacters(formattedString)
-        formattedString = trimToMaxLength(formattedString)
-        formattedString = insertFormatStrings(formattedString)
+        formattedString = encoder.trimDisallowedCharacters(formattedString)
+        formattedString = encoder.trimToMaxLength(formattedString)
+        formattedString = encoder.insertFormatStrings(formattedString)
 
         return formattedString
-    }
-
-    func insertFormatStrings(_ inputString: String) -> String {
-        guard let formatStrings = stringFormat.formatStrings else {
-            return inputString
-        }
-
-        var outputString = inputString
-        var addedCharactersCount: UInt = 0
-        for formatString in formatStrings {
-            let stringStartIndex = outputString.startIndex
-            let stringEndIndex = outputString.endIndex
-            let offset = Int(formatString.startIndex + addedCharactersCount)
-            if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex),
-                inputString.characters.count >= Int(formatString.displaysAt) {
-                for character in formatString.string.characters.reversed() {
-                    outputString.insert(character, at: insertionIndex)
-                    addedCharactersCount += 1
-                }
-            }
-        }
-
-        return outputString
-    }
-
-    func trimDisallowedCharacters(_ inputString: String) -> String {
-        guard let characterSet = stringFormat.allowedCharacterSet else {
-            return inputString
-        }
-
-        let invertedCharacterSet = characterSet.inverted
-        let stringComponents = inputString.components(separatedBy: invertedCharacterSet)
-        let outputString = stringComponents.joined(separator: "")
-
-        return outputString
-    }
-
-    func trimToMaxLength(_ inputString: String) -> String {
-        if inputString.characters.count <= stringFormat.maxLength {
-            return inputString
-        }
-
-        let stringStartIndex = inputString.startIndex
-        let endIndex = inputString.index(stringStartIndex, offsetBy: stringFormat.maxLength)
-        let outputString = inputString.substring(to: endIndex)
-
-        return outputString
     }
 }
 
@@ -96,7 +59,7 @@ extension StringFormatter: UITextFieldDelegate {
             return true
         }
 
-        var outputString = self.editingString ?? ""
+        var outputString = self.editingString
 
         if outputString.characters.count + string.characters.count <= stringFormat.maxLength {
             if string.characters.count == 0 && outputString.characters.count > 0 {
