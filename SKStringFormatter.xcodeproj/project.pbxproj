@@ -7,151 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14810B941EF1D17C005F537B /* SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14810B8A1EF1D17C005F537B /* SKStringFormatter.framework */; };
-		14810BAB1EF1D212005F537B /* SKStringFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 14810BA61EF1D212005F537B /* SKStringFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14810BDC1EF1D6E7005F537B /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BDB1EF1D6E7005F537B /* StringFormatter.swift */; };
-		14810BF81EF1D8C9005F537B /* StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BF71EF1D8C9005F537B /* StringFormat.swift */; };
-		14810C001EF1EB5C005F537B /* FormatString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BFF1EF1EB5C005F537B /* FormatString.swift */; };
-		14D64A501EF24A800058B2FC /* FormatStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */; };
-		77D29A1FDABA596FDA34F5EB /* Pods_SKStringFormatterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */; };
-		E7A1F05AB3FAC1515EFA486B /* Pods_SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50C0129F169A0B072A2CFEB /* Pods_SKStringFormatter.framework */; };
+		14A0AD241EF25AF000F9777D /* SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */; };
+		14A0AD3D1EF25B4800F9777D /* FormatString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0AD351EF25B4800F9777D /* FormatString.swift */; };
+		14A0AD3F1EF25B4800F9777D /* SKStringFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A0AD371EF25B4800F9777D /* SKStringFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A0AD401EF25B4800F9777D /* StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0AD381EF25B4800F9777D /* StringFormat.swift */; };
+		14A0AD411EF25B4800F9777D /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0AD391EF25B4800F9777D /* StringFormatter.swift */; };
+		14A0AD431EF25B4800F9777D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14A0AD3C1EF25B4800F9777D /* Info.plist */; };
+		14A0AD441EF25B5200F9777D /* FormatStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0AD3B1EF25B4800F9777D /* FormatStringSpec.swift */; };
+		3C43AC7B8A078E6551AE3C55 /* Pods_SKStringFormatterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF7CB3623B313D427B4C990 /* Pods_SKStringFormatterTests.framework */; };
+		CA2ACFFA7843D6338F23050A /* Pods_SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1488DD7CEC67294A80D70 /* Pods_SKStringFormatter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		14810B951EF1D17C005F537B /* PBXContainerItemProxy */ = {
+		14A0AD251EF25AF000F9777D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 14810B811EF1D17C005F537B /* Project object */;
+			containerPortal = 14A0AD111EF25AEF00F9777D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 14810B891EF1D17C005F537B;
+			remoteGlobalIDString = 14A0AD191EF25AF000F9777D;
 			remoteInfo = SKStringFormatter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02733E25CBF572C9934CB8B5 /* Pods-SKStringFormatterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.release.xcconfig"; sourceTree = "<group>"; };
-		14810B8A1EF1D17C005F537B /* SKStringFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKStringFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14810B931EF1D17C005F537B /* SKStringFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKStringFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14810BA51EF1D212005F537B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14810BA61EF1D212005F537B /* SKStringFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKStringFormatter.h; sourceTree = "<group>"; };
-		14810BA81EF1D212005F537B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14810BDB1EF1D6E7005F537B /* StringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
-		14810BF71EF1D8C9005F537B /* StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormat.swift; sourceTree = "<group>"; };
-		14810BFF1EF1EB5C005F537B /* FormatString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatString.swift; sourceTree = "<group>"; };
-		14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatStringSpec.swift; sourceTree = "<group>"; };
-		5D24615C5F50A8BF3B083B03 /* Pods-SKStringFormatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.release.xcconfig"; sourceTree = "<group>"; };
-		AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B80AF9EFABFA0E540C8E3858 /* Pods-SKStringFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C50C0129F169A0B072A2CFEB /* Pods_SKStringFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7E3F325F5F40434A74171A9 /* Pods-SKStringFormatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.debug.xcconfig"; sourceTree = "<group>"; };
+		14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKStringFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A0AD231EF25AF000F9777D /* SKStringFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKStringFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A0AD351EF25B4800F9777D /* FormatString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatString.swift; sourceTree = "<group>"; };
+		14A0AD361EF25B4800F9777D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A0AD371EF25B4800F9777D /* SKStringFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKStringFormatter.h; sourceTree = "<group>"; };
+		14A0AD381EF25B4800F9777D /* StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormat.swift; sourceTree = "<group>"; };
+		14A0AD391EF25B4800F9777D /* StringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		14A0AD3B1EF25B4800F9777D /* FormatStringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatStringSpec.swift; sourceTree = "<group>"; };
+		14A0AD3C1EF25B4800F9777D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1561482D30D8BF5979B8FE18 /* Pods-SKStringFormatterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.release.xcconfig"; sourceTree = "<group>"; };
+		31DA6E6160D05C59CC837F04 /* Pods-SKStringFormatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.release.xcconfig"; sourceTree = "<group>"; };
+		65E1488DD7CEC67294A80D70 /* Pods_SKStringFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBD1C2BA52208F0ADF66729 /* Pods-SKStringFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AF7CB3623B313D427B4C990 /* Pods_SKStringFormatterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B560D83BBE8F69C922FF46 /* Pods-SKStringFormatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14810B861EF1D17C005F537B /* Frameworks */ = {
+		14A0AD161EF25AF000F9777D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A1F05AB3FAC1515EFA486B /* Pods_SKStringFormatter.framework in Frameworks */,
+				CA2ACFFA7843D6338F23050A /* Pods_SKStringFormatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14810B901EF1D17C005F537B /* Frameworks */ = {
+		14A0AD201EF25AF000F9777D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14810B941EF1D17C005F537B /* SKStringFormatter.framework in Frameworks */,
-				77D29A1FDABA596FDA34F5EB /* Pods_SKStringFormatterTests.framework in Frameworks */,
+				14A0AD241EF25AF000F9777D /* SKStringFormatter.framework in Frameworks */,
+				3C43AC7B8A078E6551AE3C55 /* Pods_SKStringFormatterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14810B801EF1D17C005F537B = {
+		14A0AD101EF25AEF00F9777D = {
 			isa = PBXGroup;
 			children = (
-				14810BA41EF1D212005F537B /* Source */,
-				14810BA71EF1D212005F537B /* Tests */,
-				14810B8B1EF1D17C005F537B /* Products */,
-				8E983CD1FDE11F5E04B46F28 /* Pods */,
-				82E226C5FF0E0EFC086CB4C6 /* Frameworks */,
+				14A0AD341EF25B4800F9777D /* Source */,
+				14A0AD3A1EF25B4800F9777D /* Tests */,
+				14A0AD1B1EF25AF000F9777D /* Products */,
+				31DC86D814A9B838D2404B03 /* Pods */,
+				71CC74B302DE0D03457799EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		14810B8B1EF1D17C005F537B /* Products */ = {
+		14A0AD1B1EF25AF000F9777D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14810B8A1EF1D17C005F537B /* SKStringFormatter.framework */,
-				14810B931EF1D17C005F537B /* SKStringFormatterTests.xctest */,
+				14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */,
+				14A0AD231EF25AF000F9777D /* SKStringFormatterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14810BA41EF1D212005F537B /* Source */ = {
+		14A0AD341EF25B4800F9777D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				14810BA51EF1D212005F537B /* Info.plist */,
-				14810BA61EF1D212005F537B /* SKStringFormatter.h */,
-				14810BFF1EF1EB5C005F537B /* FormatString.swift */,
-				14810BF71EF1D8C9005F537B /* StringFormat.swift */,
-				14810BDB1EF1D6E7005F537B /* StringFormatter.swift */,
+				14A0AD351EF25B4800F9777D /* FormatString.swift */,
+				14A0AD361EF25B4800F9777D /* Info.plist */,
+				14A0AD371EF25B4800F9777D /* SKStringFormatter.h */,
+				14A0AD381EF25B4800F9777D /* StringFormat.swift */,
+				14A0AD391EF25B4800F9777D /* StringFormatter.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		14810BA71EF1D212005F537B /* Tests */ = {
+		14A0AD3A1EF25B4800F9777D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */,
-				14810BA81EF1D212005F537B /* Info.plist */,
+				14A0AD3B1EF25B4800F9777D /* FormatStringSpec.swift */,
+				14A0AD3C1EF25B4800F9777D /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		82E226C5FF0E0EFC086CB4C6 /* Frameworks */ = {
+		31DC86D814A9B838D2404B03 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C50C0129F169A0B072A2CFEB /* Pods_SKStringFormatter.framework */,
-				AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8E983CD1FDE11F5E04B46F28 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E7E3F325F5F40434A74171A9 /* Pods-SKStringFormatter.debug.xcconfig */,
-				5D24615C5F50A8BF3B083B03 /* Pods-SKStringFormatter.release.xcconfig */,
-				B80AF9EFABFA0E540C8E3858 /* Pods-SKStringFormatterTests.debug.xcconfig */,
-				02733E25CBF572C9934CB8B5 /* Pods-SKStringFormatterTests.release.xcconfig */,
+				85B560D83BBE8F69C922FF46 /* Pods-SKStringFormatter.debug.xcconfig */,
+				31DA6E6160D05C59CC837F04 /* Pods-SKStringFormatter.release.xcconfig */,
+				6BBD1C2BA52208F0ADF66729 /* Pods-SKStringFormatterTests.debug.xcconfig */,
+				1561482D30D8BF5979B8FE18 /* Pods-SKStringFormatterTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		71CC74B302DE0D03457799EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E1488DD7CEC67294A80D70 /* Pods_SKStringFormatter.framework */,
+				7AF7CB3623B313D427B4C990 /* Pods_SKStringFormatterTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		14810B871EF1D17C005F537B /* Headers */ = {
+		14A0AD171EF25AF000F9777D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14810BAB1EF1D212005F537B /* SKStringFormatter.h in Headers */,
+				14A0AD3F1EF25B4800F9777D /* SKStringFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		14810B891EF1D17C005F537B /* SKStringFormatter */ = {
+		14A0AD191EF25AF000F9777D /* SKStringFormatter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14810B9E1EF1D17C005F537B /* Build configuration list for PBXNativeTarget "SKStringFormatter" */;
+			buildConfigurationList = 14A0AD2E1EF25AF000F9777D /* Build configuration list for PBXNativeTarget "SKStringFormatter" */;
 			buildPhases = (
-				01D9A9C5CD5186BA5EB2CAE1 /* [CP] Check Pods Manifest.lock */,
-				14810B851EF1D17C005F537B /* Sources */,
-				14810B861EF1D17C005F537B /* Frameworks */,
-				14810B871EF1D17C005F537B /* Headers */,
-				14810B881EF1D17C005F537B /* Resources */,
-				D3784E7E8FCA4BED4E869A7E /* [CP] Copy Pods Resources */,
-				14810BF61EF1D7AF005F537B /* SwiftLint */,
+				AADE4374F39EB85F343677B7 /* [CP] Check Pods Manifest.lock */,
+				14A0AD151EF25AF000F9777D /* Sources */,
+				14A0AD161EF25AF000F9777D /* Frameworks */,
+				14A0AD171EF25AF000F9777D /* Headers */,
+				14A0AD181EF25AF000F9777D /* Resources */,
+				DBEB88825B310A2B97756B5E /* [CP] Copy Pods Resources */,
+				1432CAD01EF25C23003D6688 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -159,80 +160,80 @@
 			);
 			name = SKStringFormatter;
 			productName = SKStringFormatter;
-			productReference = 14810B8A1EF1D17C005F537B /* SKStringFormatter.framework */;
+			productReference = 14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		14810B921EF1D17C005F537B /* SKStringFormatterTests */ = {
+		14A0AD221EF25AF000F9777D /* SKStringFormatterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14810BA11EF1D17C005F537B /* Build configuration list for PBXNativeTarget "SKStringFormatterTests" */;
+			buildConfigurationList = 14A0AD311EF25AF000F9777D /* Build configuration list for PBXNativeTarget "SKStringFormatterTests" */;
 			buildPhases = (
-				8DF7090A3F75588F154F964C /* [CP] Check Pods Manifest.lock */,
-				14810B8F1EF1D17C005F537B /* Sources */,
-				14810B901EF1D17C005F537B /* Frameworks */,
-				14810B911EF1D17C005F537B /* Resources */,
-				C5F0CE9C4457A43E3E83D1EC /* [CP] Embed Pods Frameworks */,
-				5F101623CE190AC6D2F61253 /* [CP] Copy Pods Resources */,
+				2750CC247F1D4721995114B1 /* [CP] Check Pods Manifest.lock */,
+				14A0AD1F1EF25AF000F9777D /* Sources */,
+				14A0AD201EF25AF000F9777D /* Frameworks */,
+				14A0AD211EF25AF000F9777D /* Resources */,
+				96299D47C5DCFDC12CCCDAE7 /* [CP] Embed Pods Frameworks */,
+				7FC901155464FB3726279149 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				14810B961EF1D17C005F537B /* PBXTargetDependency */,
+				14A0AD261EF25AF000F9777D /* PBXTargetDependency */,
 			);
 			name = SKStringFormatterTests;
 			productName = SKStringFormatterTests;
-			productReference = 14810B931EF1D17C005F537B /* SKStringFormatterTests.xctest */;
+			productReference = 14A0AD231EF25AF000F9777D /* SKStringFormatterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		14810B811EF1D17C005F537B /* Project object */ = {
+		14A0AD111EF25AEF00F9777D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Sean Kladek";
 				TargetAttributes = {
-					14810B891EF1D17C005F537B = {
+					14A0AD191EF25AF000F9777D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MV978XDK83;
-						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
-					14810B921EF1D17C005F537B = {
+					14A0AD221EF25AF000F9777D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MV978XDK83;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 14810B841EF1D17C005F537B /* Build configuration list for PBXProject "SKStringFormatter" */;
+			buildConfigurationList = 14A0AD141EF25AEF00F9777D /* Build configuration list for PBXProject "SKStringFormatter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 14810B801EF1D17C005F537B;
-			productRefGroup = 14810B8B1EF1D17C005F537B /* Products */;
+			mainGroup = 14A0AD101EF25AEF00F9777D;
+			productRefGroup = 14A0AD1B1EF25AF000F9777D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14810B891EF1D17C005F537B /* SKStringFormatter */,
-				14810B921EF1D17C005F537B /* SKStringFormatterTests */,
+				14A0AD191EF25AF000F9777D /* SKStringFormatter */,
+				14A0AD221EF25AF000F9777D /* SKStringFormatterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		14810B881EF1D17C005F537B /* Resources */ = {
+		14A0AD181EF25AF000F9777D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A0AD431EF25B4800F9777D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14810B911EF1D17C005F537B /* Resources */ = {
+		14A0AD211EF25AF000F9777D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,7 +243,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01D9A9C5CD5186BA5EB2CAE1 /* [CP] Check Pods Manifest.lock */ = {
+		1432CAD01EF25C23003D6688 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+		};
+		2750CC247F1D4721995114B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,21 +272,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		14810BF61EF1D7AF005F537B /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
-		};
-		5F101623CE190AC6D2F61253 /* [CP] Copy Pods Resources */ = {
+		7FC901155464FB3726279149 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,22 +287,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8DF7090A3F75588F154F964C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C5F0CE9C4457A43E3E83D1EC /* [CP] Embed Pods Frameworks */ = {
+		96299D47C5DCFDC12CCCDAE7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,7 +302,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3784E7E8FCA4BED4E869A7E /* [CP] Copy Pods Resources */ = {
+		AADE4374F39EB85F343677B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBEB88825B310A2B97756B5E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,36 +335,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		14810B851EF1D17C005F537B /* Sources */ = {
+		14A0AD151EF25AF000F9777D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D64A501EF24A800058B2FC /* FormatStringSpec.swift in Sources */,
-				14810BDC1EF1D6E7005F537B /* StringFormatter.swift in Sources */,
-				14810C001EF1EB5C005F537B /* FormatString.swift in Sources */,
-				14810BF81EF1D8C9005F537B /* StringFormat.swift in Sources */,
+				14A0AD3D1EF25B4800F9777D /* FormatString.swift in Sources */,
+				14A0AD411EF25B4800F9777D /* StringFormatter.swift in Sources */,
+				14A0AD401EF25B4800F9777D /* StringFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14810B8F1EF1D17C005F537B /* Sources */ = {
+		14A0AD1F1EF25AF000F9777D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A0AD441EF25B5200F9777D /* FormatStringSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14810B961EF1D17C005F537B /* PBXTargetDependency */ = {
+		14A0AD261EF25AF000F9777D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14810B891EF1D17C005F537B /* SKStringFormatter */;
-			targetProxy = 14810B951EF1D17C005F537B /* PBXContainerItemProxy */;
+			target = 14A0AD191EF25AF000F9777D /* SKStringFormatter */;
+			targetProxy = 14A0AD251EF25AF000F9777D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14810B9C1EF1D17C005F537B /* Debug */ = {
+		14A0AD2C1EF25AF000F9777D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -417,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		14810B9D1EF1D17C005F537B /* Release */ = {
+		14A0AD2D1EF25AF000F9777D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -464,11 +465,10 @@
 			};
 			name = Release;
 		};
-		14810B9F1EF1D17C005F537B /* Debug */ = {
+		14A0AD2F1EF25AF000F9777D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7E3F325F5F40434A74171A9 /* Pods-SKStringFormatter.debug.xcconfig */;
+			baseConfigurationReference = 85B560D83BBE8F69C922FF46 /* Pods-SKStringFormatter.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
@@ -477,21 +477,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.SKStringFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		14810BA01EF1D17C005F537B /* Release */ = {
+		14A0AD301EF25AF000F9777D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D24615C5F50A8BF3B083B03 /* Pods-SKStringFormatter.release.xcconfig */;
+			baseConfigurationReference = 31DA6E6160D05C59CC837F04 /* Pods-SKStringFormatter.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
@@ -500,7 +497,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.SKStringFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,9 +505,9 @@
 			};
 			name = Release;
 		};
-		14810BA21EF1D17C005F537B /* Debug */ = {
+		14A0AD321EF25AF000F9777D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B80AF9EFABFA0E540C8E3858 /* Pods-SKStringFormatterTests.debug.xcconfig */;
+			baseConfigurationReference = 6BBD1C2BA52208F0ADF66729 /* Pods-SKStringFormatterTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -522,9 +518,9 @@
 			};
 			name = Debug;
 		};
-		14810BA31EF1D17C005F537B /* Release */ = {
+		14A0AD331EF25AF000F9777D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02733E25CBF572C9934CB8B5 /* Pods-SKStringFormatterTests.release.xcconfig */;
+			baseConfigurationReference = 1561482D30D8BF5979B8FE18 /* Pods-SKStringFormatterTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -538,34 +534,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14810B841EF1D17C005F537B /* Build configuration list for PBXProject "SKStringFormatter" */ = {
+		14A0AD141EF25AEF00F9777D /* Build configuration list for PBXProject "SKStringFormatter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14810B9C1EF1D17C005F537B /* Debug */,
-				14810B9D1EF1D17C005F537B /* Release */,
+				14A0AD2C1EF25AF000F9777D /* Debug */,
+				14A0AD2D1EF25AF000F9777D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14810B9E1EF1D17C005F537B /* Build configuration list for PBXNativeTarget "SKStringFormatter" */ = {
+		14A0AD2E1EF25AF000F9777D /* Build configuration list for PBXNativeTarget "SKStringFormatter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14810B9F1EF1D17C005F537B /* Debug */,
-				14810BA01EF1D17C005F537B /* Release */,
+				14A0AD2F1EF25AF000F9777D /* Debug */,
+				14A0AD301EF25AF000F9777D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14810BA11EF1D17C005F537B /* Build configuration list for PBXNativeTarget "SKStringFormatterTests" */ = {
+		14A0AD311EF25AF000F9777D /* Build configuration list for PBXNativeTarget "SKStringFormatterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14810BA21EF1D17C005F537B /* Debug */,
-				14810BA31EF1D17C005F537B /* Release */,
+				14A0AD321EF25AF000F9777D /* Debug */,
+				14A0AD331EF25AF000F9777D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 14810B811EF1D17C005F537B /* Project object */;
+	rootObject = 14A0AD111EF25AEF00F9777D /* Project object */;
 }

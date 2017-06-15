@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14810B891EF1D17C005F537B"
+               BlueprintIdentifier = "14A0AD191EF25AF000F9777D"
                BuildableName = "SKStringFormatter.framework"
                BlueprintName = "SKStringFormatter"
                ReferencedContainer = "container:SKStringFormatter.xcodeproj">
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14810B921EF1D17C005F537B"
+               BlueprintIdentifier = "14A0AD221EF25AF000F9777D"
                BuildableName = "SKStringFormatterTests.xctest"
                BlueprintName = "SKStringFormatterTests"
                ReferencedContainer = "container:SKStringFormatter.xcodeproj">
@@ -43,7 +43,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14810B891EF1D17C005F537B"
+            BlueprintIdentifier = "14A0AD191EF25AF000F9777D"
             BuildableName = "SKStringFormatter.framework"
             BlueprintName = "SKStringFormatter"
             ReferencedContainer = "container:SKStringFormatter.xcodeproj">
@@ -65,7 +65,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14810B891EF1D17C005F537B"
+            BlueprintIdentifier = "14A0AD191EF25AF000F9777D"
             BuildableName = "SKStringFormatter.framework"
             BlueprintName = "SKStringFormatter"
             ReferencedContainer = "container:SKStringFormatter.xcodeproj">
@@ -83,7 +83,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "14810B891EF1D17C005F537B"
+            BlueprintIdentifier = "14A0AD191EF25AF000F9777D"
             BuildableName = "SKStringFormatter.framework"
             BlueprintName = "SKStringFormatter"
             ReferencedContainer = "container:SKStringFormatter.xcodeproj">
