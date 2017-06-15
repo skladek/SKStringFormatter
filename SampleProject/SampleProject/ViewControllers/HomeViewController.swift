@@ -34,10 +34,10 @@ class HomeViewController: UIViewController {
     @IBAction func dismissKeyboard() {
         textField.resignFirstResponder()
     }
-}
 
-extension HomeViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        label.text = stringFormatter.string(for: textField.text)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        textField.delegate = stringFormatter
     }
 }

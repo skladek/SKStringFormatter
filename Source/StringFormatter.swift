@@ -88,3 +88,31 @@ public class StringFormatter: Formatter {
         return outputString
     }
 }
+
+extension StringFormatter: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard string.rangeOfCharacter(from: NSCharacterSet.newlines) == nil else {
+            return true
+        }
+
+        var outputString = self.editingString ?? ""
+
+        if outputString.characters.count + string.characters.count <= stringFormat.maxLength {
+            if string.characters.count == 0 {
+                // Deletions
+                let endIndex = outputString.endIndex
+                let rangeStartIndex = outputString.index(endIndex, offsetBy: -1)
+                let range = rangeStartIndex..<endIndex
+                outputString = outputString.replacingCharacters(in: range, with: "")
+            } else if outputString.characters.count >= stringFormat.maxLength {
+                return false
+            } else if string.rangeOfCharacter(from: stringFormat.allowedCharacterSet ?? CharacterSet().inverted) != nil {
+                outputString.append(string)
+            }
+        }
+
+        textField.text = self.string(for: outputString)
+
+        return false
+    }
+}
