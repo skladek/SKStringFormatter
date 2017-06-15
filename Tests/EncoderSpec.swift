@@ -41,10 +41,10 @@ class EncoderSpec: QuickSpec {
                         FormatString(string: "A", startIndex: 1),
                         FormatString(string: "B", startIndex: 2),
                         FormatString(string: "C", startIndex: 3),
-                        FormatString(string: "D", startIndex: 4),
+                        FormatString(string: "D", startIndex: 4, displaysAt: 4),
                     ]
-                    let inputString = "12345"
-                    expect(unitUnderTest.insertFormatStrings(inputString)).to(equal("1A2B3C4D5"))
+                    let inputString = "1234"
+                    expect(unitUnderTest.insertFormatStrings(inputString)).to(equal("1A2B3C4D"))
                 }
             }
 
