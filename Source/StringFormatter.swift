@@ -47,6 +47,10 @@ public class StringFormatter: Formatter {
             return inputString
         }
 
+        guard inputString.characters.count > 0 else {
+            return inputString
+        }
+
         var outputString = inputString
         var addedCharactersCount: UInt = 0
         for formatString in formatStrings {
@@ -54,7 +58,7 @@ public class StringFormatter: Formatter {
             let stringEndIndex = outputString.endIndex
             let offset = Int(formatString.startIndex + addedCharactersCount)
             if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex) {
-                for character in formatString.string.characters {
+                for character in formatString.string.characters.reversed() {
                     outputString.insert(character, at: insertionIndex)
                     addedCharactersCount += 1
                 }

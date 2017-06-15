@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="SampleProject" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="raS-QI-scY" id="dhC-Gg-hsf"/>
                 <outlet property="textField" destination="8wA-Su-vOA" id="rtO-mK-Aah"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,12 +33,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raS-QI-scY">
-                    <rect key="frame" x="16" y="134" width="343" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -47,12 +40,9 @@
                 <constraint firstItem="8wA-Su-vOA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="1F6-Dn-y3T"/>
                 <constraint firstAttribute="bottom" secondItem="mKv-t5-HBr" secondAttribute="bottom" id="3Pl-GX-Rb0"/>
                 <constraint firstAttribute="trailing" secondItem="8wA-Su-vOA" secondAttribute="trailing" constant="16" id="CZG-gr-loI"/>
-                <constraint firstAttribute="trailing" secondItem="raS-QI-scY" secondAttribute="trailing" constant="16" id="LCk-3O-uWQ"/>
                 <constraint firstItem="mKv-t5-HBr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RMg-2F-S19"/>
                 <constraint firstAttribute="trailing" secondItem="mKv-t5-HBr" secondAttribute="trailing" id="Rf5-Ss-hAz"/>
-                <constraint firstItem="raS-QI-scY" firstAttribute="top" secondItem="8wA-Su-vOA" secondAttribute="bottom" constant="44" id="SPZ-bO-vi1"/>
                 <constraint firstItem="8wA-Su-vOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Umq-6T-SEV"/>
-                <constraint firstItem="raS-QI-scY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ag2-Le-8k7"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>

@@ -10,10 +10,13 @@
 		14810BE71EF1D733005F537B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BE01EF1D733005F537B /* AppDelegate.swift */; };
 		14810BE81EF1D733005F537B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14810BE11EF1D733005F537B /* Assets.xcassets */; };
 		14810BE91EF1D733005F537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14810BE21EF1D733005F537B /* LaunchScreen.storyboard */; };
-		14810BF31EF1D76B005F537B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BF11EF1D76B005F537B /* HomeViewController.swift */; };
-		14810BF41EF1D76B005F537B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14810BF21EF1D76B005F537B /* HomeViewController.xib */; };
+		14810BF31EF1D76B005F537B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BF11EF1D76B005F537B /* TextViewController.swift */; };
+		14810BF41EF1D76B005F537B /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14810BF21EF1D76B005F537B /* TextViewController.xib */; };
 		14810BF91EF1DC35005F537B /* SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14810BD61EF1D36C005F537B /* SKStringFormatter.framework */; };
 		14810BFA1EF1DC35005F537B /* SKStringFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14810BD61EF1D36C005F537B /* SKStringFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14810C091EF23287005F537B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810C071EF23287005F537B /* RootViewController.swift */; };
+		14810C0A1EF23287005F537B /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14810C081EF23287005F537B /* RootViewController.xib */; };
+		14810C0F1EF23416005F537B /* SampleFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810C0E1EF23416005F537B /* SampleFormats.swift */; };
 		3BBA8DA2DF28A52934FE1E74 /* Pods_SampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424ABF37E830F0692EE50F3E /* Pods_SampleProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +65,11 @@
 		14810BE11EF1D733005F537B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14810BE31EF1D733005F537B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14810BE61EF1D733005F537B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14810BF11EF1D76B005F537B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		14810BF21EF1D76B005F537B /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		14810BF11EF1D76B005F537B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		14810BF21EF1D76B005F537B /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
+		14810C071EF23287005F537B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		14810C081EF23287005F537B /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		14810C0E1EF23416005F537B /* SampleFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleFormats.swift; sourceTree = "<group>"; };
 		2B8C280EC7D526B5D04B6AA6 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		424ABF37E830F0692EE50F3E /* Pods_SampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CBCBD8F8DA99EBC0F9C77D /* Pods-SampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,10 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				14810BDF1EF1D733005F537B /* Application */,
-				14810BF01EF1D76B005F537B /* ViewControllers */,
-				14810BB91EF1D331005F537B /* Products */,
-				9FD6B05FC54303BF3A9F7978 /* Pods */,
 				46F6138579141591924B4B56 /* Frameworks */,
+				9FD6B05FC54303BF3A9F7978 /* Pods */,
+				14810BB91EF1D331005F537B /* Products */,
+				14810C0D1EF23416005F537B /* StringFormats */,
+				14810BF01EF1D76B005F537B /* ViewControllers */,
 				14810BD01EF1D36B005F537B /* SKStringFormatter.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -126,11 +133,22 @@
 		14810BF01EF1D76B005F537B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				14810BF11EF1D76B005F537B /* HomeViewController.swift */,
-				14810BF21EF1D76B005F537B /* HomeViewController.xib */,
+				14810C071EF23287005F537B /* RootViewController.swift */,
+				14810C081EF23287005F537B /* RootViewController.xib */,
+				14810BF11EF1D76B005F537B /* TextViewController.swift */,
+				14810BF21EF1D76B005F537B /* TextViewController.xib */,
 			);
 			name = ViewControllers;
 			path = SampleProject/ViewControllers;
+			sourceTree = "<group>";
+		};
+		14810C0D1EF23416005F537B /* StringFormats */ = {
+			isa = PBXGroup;
+			children = (
+				14810C0E1EF23416005F537B /* SampleFormats.swift */,
+			);
+			name = StringFormats;
+			path = SampleProject/StringFormats;
 			sourceTree = "<group>";
 		};
 		46F6138579141591924B4B56 /* Frameworks */ = {
@@ -238,8 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14810BF41EF1D76B005F537B /* HomeViewController.xib in Resources */,
+				14810BF41EF1D76B005F537B /* TextViewController.xib in Resources */,
 				14810BE81EF1D733005F537B /* Assets.xcassets in Resources */,
+				14810C0A1EF23287005F537B /* RootViewController.xib in Resources */,
 				14810BE91EF1D733005F537B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14810C0F1EF23416005F537B /* SampleFormats.swift in Sources */,
 				14810BE71EF1D733005F537B /* AppDelegate.swift in Sources */,
-				14810BF31EF1D76B005F537B /* HomeViewController.swift in Sources */,
+				14810BF31EF1D76B005F537B /* TextViewController.swift in Sources */,
+				14810C091EF23287005F537B /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

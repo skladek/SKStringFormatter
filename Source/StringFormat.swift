@@ -8,14 +8,8 @@
 
 import Foundation
 
-public struct StringFormat {
-    public var allowedCharacterSet: CharacterSet?
-    public var formatStrings: [FormatString]?
-    public var maxLength: Int
-
-    public init() {
-        self.allowedCharacterSet = nil
-        self.formatStrings = nil
-        self.maxLength = NSIntegerMax
-    }
+public protocol StringFormat {
+    var allowedCharacterSet: CharacterSet? { get }
+    var formatStrings: [FormatString]? { get }
+    var maxLength: Int { get }
 }

@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  TextViewController.swift
 //  SampleProject
 //
 //  Created by Sean on 6/14/17.
@@ -9,19 +9,12 @@
 import SKStringFormatter
 import UIKit
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var label: UILabel!
+class TextViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
 
     let stringFormatter: StringFormatter
 
-    init() {
-        var stringFormat = StringFormat()
-        stringFormat.maxLength = 9
-        stringFormat.allowedCharacterSet = CharacterSet.decimalDigits
-        stringFormat.formatStrings = [FormatString(string: "-", startIndex: 3), FormatString(string: "-", startIndex: 5)]
-
+    init(stringFormat: StringFormat) {
         stringFormatter = StringFormatter(stringFormat: stringFormat)
 
         super.init(nibName: nil, bundle: nil)
