@@ -13,11 +13,11 @@ public class StringFormatter: Formatter {
 
     let encoder: Encoding
 
-    let stringFormat: StringFormat
+    let format: StringFormat
 
     public init(stringFormat: StringFormat) {
-        self.stringFormat = stringFormat
-        self.encoder = StringEncoder(stringFormat: stringFormat)
+        self.format = stringFormat
+        self.encoder = Encoder(stringFormat: stringFormat)
 
         super.init()
     }
@@ -28,7 +28,7 @@ public class StringFormatter: Formatter {
 
     init(encoder: Encoding, format: StringFormat) {
         self.encoder = encoder
-        self.stringFormat = format
+        self.format = format
 
         super.init()
     }
@@ -61,14 +61,14 @@ extension StringFormatter: UITextFieldDelegate {
 
         var outputString = self.editingString
 
-        if outputString.characters.count + string.characters.count <= stringFormat.maxLength {
+        if outputString.characters.count + string.characters.count <= format.maxLength {
             if string.characters.count == 0 && outputString.characters.count > 0 {
                 // Deletions
                 let endIndex = outputString.endIndex
                 let rangeStartIndex = outputString.index(endIndex, offsetBy: -1)
                 let range = rangeStartIndex..<endIndex
                 outputString = outputString.replacingCharacters(in: range, with: "")
-            } else if string.rangeOfCharacter(from: stringFormat.allowedCharacterSet ?? CharacterSet().inverted) != nil {
+            } else if string.rangeOfCharacter(from: format.allowedCharacterSet ?? CharacterSet().inverted) != nil {
                 outputString.append(string)
             }
         }

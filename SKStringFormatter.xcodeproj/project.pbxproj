@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1432CAD31EF2D94E003D6688 /* StringFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD11EF2D8E9003D6688 /* StringFormatterSpec.swift */; };
 		1432CAD61EF2D9EA003D6688 /* MockStringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD41EF2D985003D6688 /* MockStringFormat.swift */; };
-		1432CAD81EF2DC46003D6688 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD71EF2DC46003D6688 /* StringEncoder.swift */; };
+		1432CAD81EF2DC46003D6688 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD71EF2DC46003D6688 /* Encoder.swift */; };
 		1432CADB1EF2E3D1003D6688 /* MockEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CAD91EF2E305003D6688 /* MockEncoder.swift */; };
 		14A0AD241EF25AF000F9777D /* SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */; };
 		14A0AD3D1EF25B4800F9777D /* FormatString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0AD351EF25B4800F9777D /* FormatString.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		1432CAD11EF2D8E9003D6688 /* StringFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatterSpec.swift; sourceTree = "<group>"; };
 		1432CAD41EF2D985003D6688 /* MockStringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStringFormat.swift; sourceTree = "<group>"; };
-		1432CAD71EF2DC46003D6688 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
+		1432CAD71EF2DC46003D6688 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		1432CAD91EF2E305003D6688 /* MockEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEncoder.swift; sourceTree = "<group>"; };
 		14A0AD1A1EF25AF000F9777D /* SKStringFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKStringFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A0AD231EF25AF000F9777D /* SKStringFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKStringFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,10 +98,10 @@
 		14A0AD341EF25B4800F9777D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1432CAD71EF2DC46003D6688 /* Encoder.swift */,
 				14A0AD351EF25B4800F9777D /* FormatString.swift */,
 				14A0AD361EF25B4800F9777D /* Info.plist */,
 				14A0AD371EF25B4800F9777D /* SKStringFormatter.h */,
-				1432CAD71EF2DC46003D6688 /* StringEncoder.swift */,
 				14A0AD381EF25B4800F9777D /* StringFormat.swift */,
 				14A0AD391EF25B4800F9777D /* StringFormatter.swift */,
 			);
@@ -353,7 +353,7 @@
 			files = (
 				14A0AD3D1EF25B4800F9777D /* FormatString.swift in Sources */,
 				14A0AD411EF25B4800F9777D /* StringFormatter.swift in Sources */,
-				1432CAD81EF2DC46003D6688 /* StringEncoder.swift in Sources */,
+				1432CAD81EF2DC46003D6688 /* Encoder.swift in Sources */,
 				14A0AD401EF25B4800F9777D /* StringFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,8 +32,12 @@ class StringFormatterSpec: QuickSpec {
                     unitUnderTest = StringFormatter(stringFormat: mockStringFormat)
                 }
 
+                it("Should create an encoder with the string format") {
+                    expect((unitUnderTest.encoder as? Encoder)?.format).to(be(mockStringFormat))
+                }
+
                 it("Should set the string format") {
-                    expect(unitUnderTest.stringFormat).to(be(mockStringFormat))
+                    expect(unitUnderTest.format).to(be(mockStringFormat))
                 }
             }
 

@@ -1,5 +1,5 @@
 //
-//  StringEncoder.swift
+//  Encoder.swift
 //  SKStringFormatter
 //
 //  Created by Sean on 6/15/17.
@@ -14,15 +14,15 @@ protocol Encoding {
     func trimToMaxLength(_ inputString: String) -> String
 }
 
-class StringEncoder: Encoding {
-    let stringFormat: StringFormat
+class Encoder: Encoding {
+    let format: StringFormat
 
     init(stringFormat: StringFormat) {
-        self.stringFormat = stringFormat
+        self.format = stringFormat
     }
 
     func insertFormatStrings(_ inputString: String) -> String {
-        guard let formatStrings = stringFormat.formatStrings else {
+        guard let formatStrings = format.formatStrings else {
             return inputString
         }
 
@@ -45,7 +45,7 @@ class StringEncoder: Encoding {
     }
 
     func trimDisallowedCharacters(_ inputString: String) -> String {
-        guard let characterSet = stringFormat.allowedCharacterSet else {
+        guard let characterSet = format.allowedCharacterSet else {
             return inputString
         }
 
@@ -57,12 +57,12 @@ class StringEncoder: Encoding {
     }
 
     func trimToMaxLength(_ inputString: String) -> String {
-        if inputString.characters.count <= stringFormat.maxLength {
+        if inputString.characters.count <= format.maxLength {
             return inputString
         }
 
         let stringStartIndex = inputString.startIndex
-        let endIndex = inputString.index(stringStartIndex, offsetBy: stringFormat.maxLength)
+        let endIndex = inputString.index(stringStartIndex, offsetBy: format.maxLength)
         let outputString = inputString.substring(to: endIndex)
 
         return outputString
