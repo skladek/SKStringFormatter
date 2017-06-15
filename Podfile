@@ -14,3 +14,8 @@ target 'SKStringFormatterTests' do
 	pod 'Nimble', '= 7.0.0'
 	pod 'Quick', '= 1.1.0'
 end
+
+target 'SampleProject' do
+	project 'SampleProject/SampleProject.xcodeproj'
+	pod 'SKTableViewDataSource', '= 0.0.3'
+end
