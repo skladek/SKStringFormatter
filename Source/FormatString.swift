@@ -8,11 +8,23 @@
 
 import Foundation
 
+/// An object defining special characters within a formatted string. For instance, the hyphens in 123-45-6789
 public struct FormatString {
-    public let displaysAt: UInt
-    public let startIndex: UInt
-    public let string: String
 
+    // MARK: Internal Variables
+
+    let displaysAt: UInt
+    let startIndex: UInt
+    let string: String
+
+    /// Initializes a format string.
+    ///
+    /// - Parameters:
+    ///   - string: The string to be inserted at the start index.
+    ///   - startIndex: The index to insert the string at.
+    ///   - displaysAt: The number of characters the string must reach before the format string will be displayed.
+    ///      If a value is not provided, this value will default to startIndex + 1. Note, this means this must be
+    ///      explicitly set for trailing characters or else they will not appear.
     public init(string: String, startIndex: UInt, displaysAt: UInt? = nil) {
         self.displaysAt = displaysAt ?? startIndex + 1
         self.startIndex = startIndex

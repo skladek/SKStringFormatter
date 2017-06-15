@@ -8,13 +8,24 @@
 
 import UIKit
 
+/// Provides an formatter to convert strings for display.
 public class StringFormatter: Formatter {
-    var editingString: String = ""
+
+    // MARK: Public Variables
+
+    /// The non formatted version of the string.
+    public internal(set) var editingString: String = ""
+
+    // MARK: Internal Variables
 
     let encoder: Encoding
-
     let format: StringFormat
 
+    // MARK: Init Methods
+
+    /// Initializes a string formatter with the provided stringFormat rules.
+    ///
+    /// - Parameter stringFormat: An object providing the formatting rules to the formatter.
     public init(stringFormat: StringFormat) {
         self.format = stringFormat
         self.encoder = Encoder(stringFormat: stringFormat)
@@ -22,6 +33,7 @@ public class StringFormatter: Formatter {
         super.init()
     }
 
+    /// Do not use. Intentionally always returns nil. This class does not conform to NSCoding.
     required public init?(coder aDecoder: NSCoder) {
         return nil
     }
@@ -33,13 +45,15 @@ public class StringFormatter: Formatter {
         super.init()
     }
 
-    public override func editingString(for obj: Any) -> String? {
-        return editingString
-    }
+    // MARK: Public Methods
 
-    public override func string(for obj: Any?) -> String? {
-        guard let string = obj as? String else {
-            return nil
+    /// Returns the formatted string.
+    ///
+    /// - Parameter inputString: The string to apply the string format rules to.
+    /// - Returns: The formatted string.
+    public func formattedString(for inputString: String?) -> String {
+        guard let string = inputString else {
+            return ""
         }
 
         editingString = string
@@ -50,6 +64,14 @@ public class StringFormatter: Formatter {
         formattedString = encoder.insertFormatStrings(formattedString)
 
         return formattedString
+    }
+
+    public override func string(for obj: Any?) -> String? {
+        guard let string = obj as? String else {
+            return nil
+        }
+
+        return formattedString(for: string)
     }
 }
 
@@ -73,7 +95,7 @@ extension StringFormatter: UITextFieldDelegate {
             }
         }
 
-        textField.text = self.string(for: outputString)
+        textField.text = self.formattedString(for: outputString)
 
         return false
     }

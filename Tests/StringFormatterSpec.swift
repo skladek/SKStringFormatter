@@ -48,30 +48,29 @@ class StringFormatterSpec: QuickSpec {
                 }
             }
 
-            context("editingString(for:)") {
-                it("Should return the editing string property") {
-                    unitUnderTest.editingString = "TestString"
-                    expect(unitUnderTest.editingString(for: "")).to(equal("TestString"))
-                }
-            }
-
             context("string(for: Any?)") {
                 it("Should return nil if the input object is not a string") {
                     expect(unitUnderTest.string(for: NSObject())).to(beNil())
                 }
+            }
+
+            context("formattedString(for:)") {
+                it("Should return an empty string if nil is passed in") {
+                    expect(unitUnderTest.formattedString(for: nil)).to(equal(""))
+                }
 
                 it("Should call trimDisallowedCharacters on the encoder") {
-                    let _ = unitUnderTest.string(for: "TestString")
+                    let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockEncoder.trimDisallowedCharactersCalled).to(beTrue())
                 }
 
                 it("Should call trim to max length on the encoder") {
-                    let _ = unitUnderTest.string(for: "TestString")
+                    let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockEncoder.trimToMaxLengthCalled).to(beTrue())
                 }
 
                 it("Should call insertFormatStrings on the encoder") {
-                    let _ = unitUnderTest.string(for: "TestString")
+                    let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockEncoder.insertFormatStringsCalled).to(beTrue())
                 }
             }
