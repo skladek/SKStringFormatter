@@ -9,11 +9,13 @@
 import Foundation
 
 public struct FormatString {
+    public let displaysAt: UInt
     public let startIndex: UInt
     public let string: String
 
-    public init(string: String, startIndex: UInt) {
-        self.string = string
+    public init(string: String, startIndex: UInt, displaysAt: UInt? = nil) {
+        self.displaysAt = displaysAt ?? startIndex + 1
         self.startIndex = startIndex
+        self.string = string
     }
 }

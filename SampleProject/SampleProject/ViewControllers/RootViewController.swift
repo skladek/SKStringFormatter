@@ -27,7 +27,7 @@ class RootViewController: UIViewController {
         let array = [
             Row(stringFormat: CreditCardNumberFormat(), title: "Credit Card Number XXXX XXXX XXXX XXXX"),
             Row(stringFormat: SocialSecurityNumberFormat(), title: "Social Security Number XXX-XX-XXXX"),
-            Row(stringFormat: USPhoneNumberFormat(), title: "US Phone Number (XXX) XXX-XXXX"),
+            Row(stringFormat: USPhoneNumberFormat(), title: "US Phone Number +1 (XXX) XXX-XXXX"),
         ]
 
         dataSource = TableViewDataSource(objects: array, cell: UITableViewCell.self, cellPresenter: { (cell, row) in

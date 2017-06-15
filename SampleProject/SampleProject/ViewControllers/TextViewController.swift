@@ -32,5 +32,7 @@ class TextViewController: UIViewController {
         super.viewDidLoad()
 
         textField.delegate = stringFormatter
+
+        textField.text = stringFormatter.string(for: "")
     }
 }

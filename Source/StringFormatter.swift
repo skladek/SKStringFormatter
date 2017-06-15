@@ -47,17 +47,14 @@ public class StringFormatter: Formatter {
             return inputString
         }
 
-        guard inputString.characters.count > 0 else {
-            return inputString
-        }
-
         var outputString = inputString
         var addedCharactersCount: UInt = 0
         for formatString in formatStrings {
             let stringStartIndex = outputString.startIndex
             let stringEndIndex = outputString.endIndex
             let offset = Int(formatString.startIndex + addedCharactersCount)
-            if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex) {
+            if let insertionIndex = outputString.index(stringStartIndex, offsetBy: offset, limitedBy: stringEndIndex),
+                inputString.characters.count >= Int(formatString.displaysAt) {
                 for character in formatString.string.characters.reversed() {
                     outputString.insert(character, at: insertionIndex)
                     addedCharactersCount += 1
@@ -102,7 +99,7 @@ extension StringFormatter: UITextFieldDelegate {
         var outputString = self.editingString ?? ""
 
         if outputString.characters.count + string.characters.count <= stringFormat.maxLength {
-            if string.characters.count == 0 {
+            if string.characters.count == 0 && outputString.characters.count > 0 {
                 // Deletions
                 let endIndex = outputString.endIndex
                 let rangeStartIndex = outputString.index(endIndex, offsetBy: -1)

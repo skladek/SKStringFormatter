@@ -48,9 +48,10 @@ class USPhoneNumberFormat: StringFormat {
         allowedCharacterSet = CharacterSet.decimalDigits
         maxLength = 10
         formatStrings = [
-            FormatString(string: "(", startIndex: 0),
-            FormatString(string: ") ", startIndex: 3),
-            FormatString(string: "-", startIndex: 6),
+            FormatString(string: "+1 ", startIndex: 0, displaysAt: 0),
+            FormatString(string: "(", startIndex: 0, displaysAt: 4),
+            FormatString(string: ") ", startIndex: 3, displaysAt: 4),
+            FormatString(string: "-", startIndex: 6, displaysAt: 7),
         ]
     }
 }
