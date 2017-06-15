@@ -12,6 +12,7 @@
 		14810BDC1EF1D6E7005F537B /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BDB1EF1D6E7005F537B /* StringFormatter.swift */; };
 		14810BF81EF1D8C9005F537B /* StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BF71EF1D8C9005F537B /* StringFormat.swift */; };
 		14810C001EF1EB5C005F537B /* FormatString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14810BFF1EF1EB5C005F537B /* FormatString.swift */; };
+		14D64A501EF24A800058B2FC /* FormatStringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */; };
 		77D29A1FDABA596FDA34F5EB /* Pods_SKStringFormatterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */; };
 		E7A1F05AB3FAC1515EFA486B /* Pods_SKStringFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50C0129F169A0B072A2CFEB /* Pods_SKStringFormatter.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		14810BDB1EF1D6E7005F537B /* StringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		14810BF71EF1D8C9005F537B /* StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormat.swift; sourceTree = "<group>"; };
 		14810BFF1EF1EB5C005F537B /* FormatString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatString.swift; sourceTree = "<group>"; };
+		14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatStringSpec.swift; sourceTree = "<group>"; };
 		5D24615C5F50A8BF3B083B03 /* Pods-SKStringFormatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatter/Pods-SKStringFormatter.release.xcconfig"; sourceTree = "<group>"; };
 		AAD8C4856E411C8B11C81DC5 /* Pods_SKStringFormatterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKStringFormatterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80AF9EFABFA0E540C8E3858 /* Pods-SKStringFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKStringFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKStringFormatterTests/Pods-SKStringFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		14810BA71EF1D212005F537B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				14D64A4F1EF24A800058B2FC /* FormatStringSpec.swift */,
 				14810BA81EF1D212005F537B /* Info.plist */,
 			);
 			path = Tests;
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D64A501EF24A800058B2FC /* FormatStringSpec.swift in Sources */,
 				14810BDC1EF1D6E7005F537B /* StringFormatter.swift in Sources */,
 				14810C001EF1EB5C005F537B /* FormatString.swift in Sources */,
 				14810BF81EF1D8C9005F537B /* StringFormat.swift in Sources */,
