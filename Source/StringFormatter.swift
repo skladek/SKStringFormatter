@@ -66,6 +66,10 @@ public class StringFormatter: Formatter {
         return formattedString
     }
 
+    /// Returns the formatted string.
+    ///
+    /// - Parameter inputString: The string to apply the string format rules to.
+    /// - Returns: The formatted string.
     public override func string(for obj: Any?) -> String? {
         guard let string = obj as? String else {
             return nil
@@ -76,6 +80,7 @@ public class StringFormatter: Formatter {
 }
 
 extension StringFormatter: UITextFieldDelegate {
+    /// Changes the text field string to the formatted string.
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard string.rangeOfCharacter(from: NSCharacterSet.newlines) == nil else {
             return true
