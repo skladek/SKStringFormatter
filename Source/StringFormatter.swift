@@ -11,15 +11,9 @@ import UIKit
 /// Provides an formatter to convert strings for display.
 public class StringFormatter: Formatter {
 
-    // MARK: Public Variables
-
-    /// The non formatted version of the string.
-    public internal(set) var editingString: String = ""
-
     // MARK: Internal Variables
 
-    let decoder: Decoding
-    let encoder: Encoding
+    let transformer: Transforming
     let format: StringFormat
 
     // MARK: Init Methods
@@ -29,8 +23,7 @@ public class StringFormatter: Formatter {
     /// - Parameter stringFormat: An object providing the formatting rules to the formatter.
     public init(stringFormat: StringFormat) {
         self.format = stringFormat
-        self.decoder = Decoder(stringFormat: stringFormat)
-        self.encoder = Encoder(stringFormat: stringFormat)
+        self.transformer = StringTransformer(stringFormat: stringFormat)
 
         super.init()
     }
@@ -40,15 +33,22 @@ public class StringFormatter: Formatter {
         return nil
     }
 
-    init(decoder: Decoding, encoder: Encoding, format: StringFormat) {
-        self.decoder = decoder
-        self.encoder = encoder
+    init(transformer: Transforming, format: StringFormat) {
+        self.transformer = transformer
         self.format = format
 
         super.init()
     }
 
     // MARK: Public Methods
+
+    public override func editingString(for obj: Any) -> String? {
+        guard let string = obj as? String else {
+            return nil
+        }
+
+        return unformattedString(for: string)
+    }
 
     /// Returns the formatted string.
     ///
@@ -59,14 +59,12 @@ public class StringFormatter: Formatter {
             return ""
         }
 
-        editingString = string
+        var outputString = string
+        outputString = transformer.trimDisallowedCharacters(outputString)
+        outputString = transformer.trimToMaxLength(outputString)
+        outputString = transformer.insertFormatStrings(outputString)
 
-        var formattedString = string
-        formattedString = encoder.trimDisallowedCharacters(formattedString)
-        formattedString = encoder.trimToMaxLength(formattedString)
-        formattedString = encoder.insertFormatStrings(formattedString)
-
-        return formattedString
+        return outputString
     }
 
     /// Returns the formatted string.
@@ -87,7 +85,9 @@ public class StringFormatter: Formatter {
         }
 
         var outputString = string
-        outputString = decoder.removeFormatStrings(outputString)
+        outputString = transformer.removeFormatStrings(outputString)
+        outputString = transformer.trimDisallowedCharacters(outputString)
+        outputString = transformer.trimToMaxLength(outputString)
 
         return outputString
     }
@@ -100,7 +100,7 @@ extension StringFormatter: UITextFieldDelegate {
             return true
         }
 
-        var outputString = self.editingString
+        var outputString = unformattedString(for: textField.text)
 
         if outputString.characters.count + string.characters.count <= format.maxLength {
             if string.characters.count == 0 && outputString.characters.count > 0 {
