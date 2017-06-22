@@ -42,6 +42,10 @@ public class StringFormatter: Formatter {
 
     // MARK: Public Methods
 
+    /// Returns the unformatted string. The unformattedString(for:) method is preferred to this method.
+    ///
+    /// - Parameter obj: The string to apply the format rules to.
+    /// - Returns: The unformatted string.
     public override func editingString(for obj: Any) -> String? {
         guard let string = obj as? String else {
             return nil
@@ -67,9 +71,9 @@ public class StringFormatter: Formatter {
         return outputString
     }
 
-    /// Returns the formatted string.
+    /// Returns the formatted string. The formattedString(for:) method is preferred to this method.
     ///
-    /// - Parameter inputString: The string to apply the string format rules to.
+    /// - Parameter obj: The string to apply the string format rules to.
     /// - Returns: The formatted string.
     public override func string(for obj: Any?) -> String? {
         guard let string = obj as? String else {
@@ -79,6 +83,10 @@ public class StringFormatter: Formatter {
         return formattedString(for: string)
     }
 
+    /// Returns the unformatted string.
+    ///
+    /// - Parameter inputString: The string to apply the format rules to.
+    /// - Returns: The unformatted string.
     public func unformattedString(for inputString: String?) -> String {
         guard let string = inputString else {
             return ""
