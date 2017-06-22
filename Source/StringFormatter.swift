@@ -115,6 +115,7 @@ extension StringFormatter: UITextFieldDelegate {
         }
 
         textField.text = self.formattedString(for: outputString)
+        textField.sendActions(for: .editingChanged)
 
         return false
     }

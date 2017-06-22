@@ -32,9 +32,15 @@ class Decoder: Decoding {
 
         var outputString = inputString
         for formatString in formatStrings {
-            if let formatRange = outputString.range(of: formatString.string) {
-                if outputString.distance(from: outputString.startIndex, to: formatRange.lowerBound) == Int(formatString.startIndex) {
-                    outputString = outputString.replacingCharacters(in: formatRange, with: "")
+            let startIndex = outputString.startIndex
+            let endIndex = outputString.endIndex
+            if let lowerBound = outputString.index(startIndex, offsetBy: Int(formatString.startIndex), limitedBy: endIndex) {
+                if let upperBound = outputString.index(lowerBound, offsetBy: formatString.string.characters.count, limitedBy: endIndex) {
+                    let formatRange = lowerBound..<upperBound
+                    let substring = outputString.substring(with: formatRange)
+                    if substring == formatString.string {
+                        outputString = outputString.replacingCharacters(in: formatRange, with: "")
+                    }
                 }
             }
         }

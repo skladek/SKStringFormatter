@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextViewController" customModule="SampleProject" customModuleProvider="target">
             <connections>
-                <outlet property="textField" destination="8wA-Su-vOA" id="rtO-mK-Aah"/>
-                <outlet property="unformattedLabel" destination="6hd-DN-gc3" id="jss-vT-hQA"/>
+                <outlet property="formattingResultLabel" destination="6hd-DN-gc3" id="gWO-TP-t75"/>
+                <outlet property="formattingTextField" destination="8wA-Su-vOA" id="3TG-aG-IZO"/>
+                <outlet property="unformattingResultLabel" destination="nfG-Qq-dSK" id="7Te-16-bcO"/>
+                <outlet property="unformattingTextField" destination="ihE-ti-63w" id="NhS-ap-deT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,6 +41,9 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="3og-8V-oHp"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hd-DN-gc3">
                     <rect key="frame" x="16" y="130.5" width="48" height="21"/>
@@ -46,19 +51,47 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-Qq-dSK">
+                    <rect key="frame" x="16" y="262.5" width="48" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unformatter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPa-Wv-nRR">
+                    <rect key="frame" x="16" y="195.5" width="94" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-ti-63w" customClass="FormattedTextField" customModule="SKStringFormatter">
+                    <rect key="frame" x="16" y="224.5" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="EWe-3y-Wd4"/>
+                    </connections>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mKv-t5-HBr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="15B-wB-ztk"/>
                 <constraint firstAttribute="bottom" secondItem="mKv-t5-HBr" secondAttribute="bottom" id="3Pl-GX-Rb0"/>
                 <constraint firstItem="8wA-Su-vOA" firstAttribute="top" secondItem="5iC-p3-uid" secondAttribute="bottom" constant="8" id="3ok-jE-PJf"/>
+                <constraint firstAttribute="trailing" secondItem="ihE-ti-63w" secondAttribute="trailing" constant="16" id="4Ya-dK-dj4"/>
+                <constraint firstItem="nfG-Qq-dSK" firstAttribute="top" secondItem="ihE-ti-63w" secondAttribute="bottom" constant="8" id="6Gt-0U-DYD"/>
                 <constraint firstAttribute="trailing" secondItem="8wA-Su-vOA" secondAttribute="trailing" constant="16" id="CZG-gr-loI"/>
                 <constraint firstItem="6hd-DN-gc3" firstAttribute="leading" secondItem="8wA-Su-vOA" secondAttribute="leading" id="CyV-Xj-ZTy"/>
+                <constraint firstItem="lPa-Wv-nRR" firstAttribute="leading" secondItem="ihE-ti-63w" secondAttribute="leading" id="GZc-dh-fKu"/>
+                <constraint firstItem="ihE-ti-63w" firstAttribute="top" secondItem="lPa-Wv-nRR" secondAttribute="bottom" constant="8" id="IZP-df-vsy"/>
                 <constraint firstItem="mKv-t5-HBr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RMg-2F-S19"/>
                 <constraint firstAttribute="trailing" secondItem="mKv-t5-HBr" secondAttribute="trailing" id="Rf5-Ss-hAz"/>
                 <constraint firstItem="8wA-Su-vOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Umq-6T-SEV"/>
                 <constraint firstItem="5iC-p3-uid" firstAttribute="leading" secondItem="8wA-Su-vOA" secondAttribute="leading" id="XU5-iO-ha5"/>
                 <constraint firstItem="5iC-p3-uid" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ZPq-Ay-ZUo"/>
+                <constraint firstItem="lPa-Wv-nRR" firstAttribute="top" secondItem="6hd-DN-gc3" secondAttribute="bottom" constant="44" id="aEL-CI-i3F"/>
+                <constraint firstItem="ihE-ti-63w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="bNX-2b-vsd"/>
+                <constraint firstItem="nfG-Qq-dSK" firstAttribute="leading" secondItem="ihE-ti-63w" secondAttribute="leading" id="c3g-CF-TsK"/>
                 <constraint firstItem="6hd-DN-gc3" firstAttribute="top" secondItem="8wA-Su-vOA" secondAttribute="bottom" constant="8" id="hXf-Wc-rcw"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>

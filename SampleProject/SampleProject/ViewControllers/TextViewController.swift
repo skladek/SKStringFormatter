@@ -10,9 +10,10 @@ import SKStringFormatter
 import UIKit
 
 class TextViewController: UIViewController {
-    @IBOutlet weak var textField: UITextField!
-
-    @IBOutlet weak var unformattedLabel: UILabel!
+    @IBOutlet weak var formattingTextField: UITextField!
+    @IBOutlet weak var formattingResultLabel: UILabel!
+    @IBOutlet weak var unformattingTextField: UITextField!
+    @IBOutlet weak var unformattingResultLabel: UILabel!
 
     let stringFormatter: StringFormatter
 
@@ -26,25 +27,24 @@ class TextViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    deinit {
-        textField.removeObserver(self, forKeyPath: #keyPath(UITextField.text))
-    }
-
     @IBAction func dismissKeyboard() {
-        textField.resignFirstResponder()
+        formattingTextField.resignFirstResponder()
     }
 
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        let unformattedText = stringFormatter.unformattedString(for: textField.text)
-        unformattedLabel.text = unformattedText
+    @IBAction func textFieldChanged(_ sender: UITextField) {
+        let unformattedText = stringFormatter.unformattedString(for: sender.text)
+
+        if sender == formattingTextField {
+            formattingResultLabel.text = unformattedText
+        } else {
+            unformattingResultLabel.text = unformattedText
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textField.delegate = stringFormatter
-        textField.text = stringFormatter.formattedString(for: "")
-
-        textField.addObserver(self, forKeyPath: #keyPath(UITextField.text), options: [.new], context: nil)
+        formattingTextField.delegate = stringFormatter
+        formattingTextField.text = stringFormatter.formattedString(for: "")
     }
 }
