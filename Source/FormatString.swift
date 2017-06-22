@@ -6,6 +6,8 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
+// swiftlint:disable operator_whitespace
+
 import Foundation
 
 /// An object defining special characters within a formatted string. For instance, the hyphens in 123-45-6789

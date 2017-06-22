@@ -12,6 +12,7 @@ import Foundation
 
 class MockTransformer: Transforming {
     var insertFormatStringsCalled = false
+    var removeFormatStringsCalled = false
     var trimDisallowedCharactersCalled = false
     var trimToMaxLengthCalled = false
 
@@ -22,6 +23,8 @@ class MockTransformer: Transforming {
     }
 
     func removeFormatStrings(_ inputString: String) -> String {
+        removeFormatStringsCalled = true
+
         return inputString
     }
 

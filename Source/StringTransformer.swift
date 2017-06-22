@@ -88,7 +88,7 @@ class StringTransformer: Transforming {
         let stringStartIndex = inputString.startIndex
         let endIndex = inputString.index(stringStartIndex, offsetBy: format.maxLength)
         let outputString = inputString.substring(to: endIndex)
-        
+
         return outputString
     }
 }

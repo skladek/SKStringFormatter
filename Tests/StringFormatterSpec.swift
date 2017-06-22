@@ -32,7 +32,7 @@ class StringFormatterSpec: QuickSpec {
                     unitUnderTest = StringFormatter(stringFormat: mockStringFormat)
                 }
 
-                it("Should create an encoder with the string format") {
+                it("Should create an transformer with the string format") {
                     expect((unitUnderTest.transformer as? StringTransformer)?.format).to(be(mockStringFormat))
                 }
 
@@ -48,9 +48,13 @@ class StringFormatterSpec: QuickSpec {
                 }
             }
 
-            context("string(for: Any?)") {
+            context("editingString(for:)") {
                 it("Should return nil if the input object is not a string") {
-                    expect(unitUnderTest.string(for: NSObject())).to(beNil())
+                    expect(unitUnderTest.editingString(for: NSObject())).to(beNil())
+                }
+
+                it("Should return a string if the input object is a string") {
+                    expect(unitUnderTest.editingString(for: "test")).to(beAnInstanceOf(String.self))
                 }
             }
 
@@ -59,19 +63,50 @@ class StringFormatterSpec: QuickSpec {
                     expect(unitUnderTest.formattedString(for: nil)).to(equal(""))
                 }
 
-                it("Should call trimDisallowedCharacters on the encoder") {
+                it("Should call trimDisallowedCharacters on the transformer") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockTransformer.trimDisallowedCharactersCalled).to(beTrue())
                 }
 
-                it("Should call trim to max length on the encoder") {
+                it("Should call trim to max length on the transformer") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockTransformer.trimToMaxLengthCalled).to(beTrue())
                 }
 
-                it("Should call insertFormatStrings on the encoder") {
+                it("Should call insertFormatStrings on the transformer") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
                     expect(mockTransformer.insertFormatStringsCalled).to(beTrue())
+                }
+            }
+
+            context("string(for:)") {
+                it("Should return nil if the input object is not a string") {
+                    expect(unitUnderTest.string(for: NSObject())).to(beNil())
+                }
+
+                it("Should return a string if the input object is a string") {
+                    expect(unitUnderTest.string(for: "test")).to(beAnInstanceOf(String.self))
+                }
+            }
+
+            context("unformattedString(for:)") {
+                it("Should return an empty string if nil is passed in") {
+                    expect(unitUnderTest.unformattedString(for: nil)).to(equal(""))
+                }
+
+                it("Should call removeFormatStrings on the transformer") {
+                    let _ = unitUnderTest.unformattedString(for: "TestString")
+                    expect(mockTransformer.removeFormatStringsCalled).to(beTrue())
+                }
+
+                it("Should call trim to max length on the transformer") {
+                    let _ = unitUnderTest.formattedString(for: "TestString")
+                    expect(mockTransformer.trimToMaxLengthCalled).to(beTrue())
+                }
+
+                it("Should call trimDisallowedCharacters on the transformer") {
+                    let _ = unitUnderTest.formattedString(for: "TestString")
+                    expect(mockTransformer.trimDisallowedCharactersCalled).to(beTrue())
                 }
             }
 
@@ -82,7 +117,7 @@ class StringFormatterSpec: QuickSpec {
                     textField = UITextField(frame: .zero)
                     unitUnderTest = StringFormatter(stringFormat: mockStringFormat)
                     textField.delegate = unitUnderTest
-                    textField.text = unitUnderTest.string(for: "1234")
+                    textField.text = unitUnderTest.formattedString(for: "1234")
                 }
 
                 it("Should return true if the input string is a new line character") {

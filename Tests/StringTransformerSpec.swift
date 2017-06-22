@@ -48,6 +48,25 @@ class StringTransformerSpec: QuickSpec {
                 }
             }
 
+            context("removeFormatStrings(_:)") {
+                it("Should return the input string if no format strings are specified") {
+                    mockStringFormat.formatStrings = nil
+                    let inputString = "TestString"
+                    expect(unitUnderTest.removeFormatStrings(inputString)).to(equal(inputString))
+                }
+
+                it("Should remove the format string objects at their specified locations") {
+                    mockStringFormat.formatStrings = [
+                        FormatString(string: "A", startIndex: 1),
+                        FormatString(string: "B", startIndex: 2),
+                        FormatString(string: "C", startIndex: 3),
+                        FormatString(string: "D", startIndex: 4, displaysAt: 4),
+                    ]
+                    let inputString = "1A2B3C4D"
+                    expect(unitUnderTest.removeFormatStrings(inputString)).to(equal("1234"))
+                }
+            }
+
             context("trimDisallowedCharacters(_:)") {
                 it("Should return the input string if allowedCharacterSet is nil") {
                     mockStringFormat.allowedCharacterSet = nil
