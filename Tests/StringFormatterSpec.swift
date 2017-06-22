@@ -16,14 +16,14 @@ class StringFormatterSpec: QuickSpec {
 
     override func spec() {
         describe("StringFormatter") {
-            var mockEncoder: MockEncoder!
+            var mockTransformer: MockTransformer!
             var mockStringFormat: MockStringFormat!
             var unitUnderTest: StringFormatter!
 
             beforeEach {
-                mockEncoder = MockEncoder()
+                mockTransformer = MockTransformer()
                 mockStringFormat = MockStringFormat()
-                unitUnderTest = StringFormatter(encoder: mockEncoder, format: mockStringFormat)
+                unitUnderTest = StringFormatter(transformer: mockTransformer, format: mockStringFormat)
             }
 
             context("init(stringFormat:)") {
@@ -33,7 +33,7 @@ class StringFormatterSpec: QuickSpec {
                 }
 
                 it("Should create an encoder with the string format") {
-                    expect((unitUnderTest.encoder as? Encoder)?.format).to(be(mockStringFormat))
+                    expect((unitUnderTest.transformer as? StringTransformer)?.format).to(be(mockStringFormat))
                 }
 
                 it("Should set the string format") {
@@ -61,17 +61,17 @@ class StringFormatterSpec: QuickSpec {
 
                 it("Should call trimDisallowedCharacters on the encoder") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
-                    expect(mockEncoder.trimDisallowedCharactersCalled).to(beTrue())
+                    expect(mockTransformer.trimDisallowedCharactersCalled).to(beTrue())
                 }
 
                 it("Should call trim to max length on the encoder") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
-                    expect(mockEncoder.trimToMaxLengthCalled).to(beTrue())
+                    expect(mockTransformer.trimToMaxLengthCalled).to(beTrue())
                 }
 
                 it("Should call insertFormatStrings on the encoder") {
                     let _ = unitUnderTest.formattedString(for: "TestString")
-                    expect(mockEncoder.insertFormatStringsCalled).to(beTrue())
+                    expect(mockTransformer.insertFormatStringsCalled).to(beTrue())
                 }
             }
 

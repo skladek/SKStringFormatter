@@ -1,5 +1,5 @@
 //
-//  EncoderSpec.swift
+//  StringTransformerSpec.swift
 //  SKStringFormatter
 //
 //  Created by Sean on 6/15/17.
@@ -12,15 +12,15 @@ import Quick
 
 @testable import SKStringFormatter
 
-class EncoderSpec: QuickSpec {
+class StringTransformerSpec: QuickSpec {
     override func spec() {
-        describe("Encoder") {
+        describe("StringTransformer") {
             var mockStringFormat: MockStringFormat!
-            var unitUnderTest: Encoder!
+            var unitUnderTest: StringTransformer!
 
             beforeEach {
                 mockStringFormat = MockStringFormat()
-                unitUnderTest = Encoder(stringFormat: mockStringFormat)
+                unitUnderTest = StringTransformer(stringFormat: mockStringFormat)
             }
 
             context("init(stringFormat:)") {
