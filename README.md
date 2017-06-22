@@ -8,6 +8,13 @@
 
 SKStringFormatter is a formatter to visually style strings to a known structure while maintaining the raw value of a string without the style additions. This can be used to add formatting for a phone number for example. Check out the SampleProject in the workspace to see some usage examples.
 
+- [Installation](#installation)
+- [Initialization](#initialization)
+- [StringFormat](#stringformat)
+- [FormatString](#formatstring)
+- [UITextFieldDelegate](#uitextfielddelegate)
+- [FormattedTextField](#formattedtextfield)
+
 ---
 
 ## Installation
