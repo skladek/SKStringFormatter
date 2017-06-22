@@ -31,3 +31,15 @@ public struct FormatString {
         self.string = string
     }
 }
+
+extension FormatString: Comparable {
+    public static func <(lhs: FormatString, rhs: FormatString) -> Bool {
+        return lhs.startIndex < rhs.startIndex
+    }
+
+    public static func ==(lhs: FormatString, rhs: FormatString) -> Bool {
+        return (lhs.displaysAt == rhs.displaysAt) &&
+                (lhs.startIndex == rhs.startIndex) &&
+                (lhs.string == rhs.string)
+    }
+}

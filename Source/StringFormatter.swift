@@ -18,6 +18,7 @@ public class StringFormatter: Formatter {
 
     // MARK: Internal Variables
 
+    let decoder: Decoding
     let encoder: Encoding
     let format: StringFormat
 
@@ -28,6 +29,7 @@ public class StringFormatter: Formatter {
     /// - Parameter stringFormat: An object providing the formatting rules to the formatter.
     public init(stringFormat: StringFormat) {
         self.format = stringFormat
+        self.decoder = Decoder(stringFormat: stringFormat)
         self.encoder = Encoder(stringFormat: stringFormat)
 
         super.init()
@@ -38,7 +40,8 @@ public class StringFormatter: Formatter {
         return nil
     }
 
-    init(encoder: Encoding, format: StringFormat) {
+    init(decoder: Decoding, encoder: Encoding, format: StringFormat) {
+        self.decoder = decoder
         self.encoder = encoder
         self.format = format
 
@@ -76,6 +79,17 @@ public class StringFormatter: Formatter {
         }
 
         return formattedString(for: string)
+    }
+
+    public func unformattedString(for inputString: String?) -> String {
+        guard let string = inputString else {
+            return ""
+        }
+
+        var outputString = string
+        outputString = decoder.removeFormatStrings(outputString)
+
+        return outputString
     }
 }
 

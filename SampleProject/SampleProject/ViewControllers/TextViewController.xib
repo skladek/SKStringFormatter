@@ -9,9 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="SampleProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextViewController" customModule="SampleProject" customModuleProvider="target">
             <connections>
                 <outlet property="textField" destination="8wA-Su-vOA" id="rtO-mK-Aah"/>
+                <outlet property="unformattedLabel" destination="6hd-DN-gc3" id="jss-vT-hQA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,22 +28,38 @@
                         <action selector="dismissKeyboard" destination="-1" eventType="touchDown" id="bi6-nM-qDL"/>
                     </connections>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formatter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iC-p3-uid">
+                    <rect key="frame" x="16" y="64" width="76" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wA-Su-vOA" customClass="FormattedTextField" customModule="SKStringFormatter">
-                    <rect key="frame" x="16" y="60" width="343" height="30"/>
+                    <rect key="frame" x="16" y="92.5" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hd-DN-gc3">
+                    <rect key="frame" x="16" y="130.5" width="48" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mKv-t5-HBr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="15B-wB-ztk"/>
-                <constraint firstItem="8wA-Su-vOA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="1F6-Dn-y3T"/>
                 <constraint firstAttribute="bottom" secondItem="mKv-t5-HBr" secondAttribute="bottom" id="3Pl-GX-Rb0"/>
+                <constraint firstItem="8wA-Su-vOA" firstAttribute="top" secondItem="5iC-p3-uid" secondAttribute="bottom" constant="8" id="3ok-jE-PJf"/>
                 <constraint firstAttribute="trailing" secondItem="8wA-Su-vOA" secondAttribute="trailing" constant="16" id="CZG-gr-loI"/>
+                <constraint firstItem="6hd-DN-gc3" firstAttribute="leading" secondItem="8wA-Su-vOA" secondAttribute="leading" id="CyV-Xj-ZTy"/>
                 <constraint firstItem="mKv-t5-HBr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RMg-2F-S19"/>
                 <constraint firstAttribute="trailing" secondItem="mKv-t5-HBr" secondAttribute="trailing" id="Rf5-Ss-hAz"/>
                 <constraint firstItem="8wA-Su-vOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Umq-6T-SEV"/>
+                <constraint firstItem="5iC-p3-uid" firstAttribute="leading" secondItem="8wA-Su-vOA" secondAttribute="leading" id="XU5-iO-ha5"/>
+                <constraint firstItem="5iC-p3-uid" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ZPq-Ay-ZUo"/>
+                <constraint firstItem="6hd-DN-gc3" firstAttribute="top" secondItem="8wA-Su-vOA" secondAttribute="bottom" constant="8" id="hXf-Wc-rcw"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
