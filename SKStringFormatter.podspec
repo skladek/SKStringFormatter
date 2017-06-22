@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'SKStringFormatter'
-  spec.version = '0.0.1'
+  spec.version = '0.0.2'
   spec.license = 'MIT'
   spec.summary = 'A flexible formatter for strings.'
   spec.homepage = 'https://github.com/skladek/SKStringFormatter'
