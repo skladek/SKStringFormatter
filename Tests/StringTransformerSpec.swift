@@ -1,5 +1,5 @@
 //
-//  EncoderSpec.swift
+//  StringTransformerSpec.swift
 //  SKStringFormatter
 //
 //  Created by Sean on 6/15/17.
@@ -12,15 +12,15 @@ import Quick
 
 @testable import SKStringFormatter
 
-class EncoderSpec: QuickSpec {
+class StringTransformerSpec: QuickSpec {
     override func spec() {
-        describe("Encoder") {
+        describe("StringTransformer") {
             var mockStringFormat: MockStringFormat!
-            var unitUnderTest: Encoder!
+            var unitUnderTest: StringTransformer!
 
             beforeEach {
                 mockStringFormat = MockStringFormat()
-                unitUnderTest = Encoder(stringFormat: mockStringFormat)
+                unitUnderTest = StringTransformer(stringFormat: mockStringFormat)
             }
 
             context("init(stringFormat:)") {
@@ -45,6 +45,25 @@ class EncoderSpec: QuickSpec {
                     ]
                     let inputString = "1234"
                     expect(unitUnderTest.insertFormatStrings(inputString)).to(equal("1A2B3C4D"))
+                }
+            }
+
+            context("removeFormatStrings(_:)") {
+                it("Should return the input string if no format strings are specified") {
+                    mockStringFormat.formatStrings = nil
+                    let inputString = "TestString"
+                    expect(unitUnderTest.removeFormatStrings(inputString)).to(equal(inputString))
+                }
+
+                it("Should remove the format string objects at their specified locations") {
+                    mockStringFormat.formatStrings = [
+                        FormatString(string: "A", startIndex: 1),
+                        FormatString(string: "B", startIndex: 2),
+                        FormatString(string: "C", startIndex: 3),
+                        FormatString(string: "D", startIndex: 4, displaysAt: 4),
+                    ]
+                    let inputString = "1A2B3C4D"
+                    expect(unitUnderTest.removeFormatStrings(inputString)).to(equal("1234"))
                 }
             }
 

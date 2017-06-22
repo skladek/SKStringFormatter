@@ -6,6 +6,8 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
+// swiftlint:disable operator_whitespace
+
 import Foundation
 
 /// An object defining special characters within a formatted string. For instance, the hyphens in 123-45-6789
@@ -29,5 +31,17 @@ public struct FormatString {
         self.displaysAt = displaysAt ?? startIndex + 1
         self.startIndex = startIndex
         self.string = string
+    }
+}
+
+extension FormatString: Comparable {
+    public static func <(lhs: FormatString, rhs: FormatString) -> Bool {
+        return lhs.startIndex < rhs.startIndex
+    }
+
+    public static func ==(lhs: FormatString, rhs: FormatString) -> Bool {
+        return (lhs.displaysAt == rhs.displaysAt) &&
+                (lhs.startIndex == rhs.startIndex) &&
+                (lhs.string == rhs.string)
     }
 }

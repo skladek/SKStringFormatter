@@ -1,5 +1,5 @@
 //
-//  MockEncoder.swift
+//  MockTransformer.swift
 //  SKStringFormatter
 //
 //  Created by Sean on 6/15/17.
@@ -10,13 +10,20 @@ import Foundation
 
 @testable import SKStringFormatter
 
-class MockEncoder: Encoding {
+class MockTransformer: Transforming {
     var insertFormatStringsCalled = false
+    var removeFormatStringsCalled = false
     var trimDisallowedCharactersCalled = false
     var trimToMaxLengthCalled = false
 
     func insertFormatStrings(_ inputString: String) -> String {
         insertFormatStringsCalled = true
+
+        return inputString
+    }
+
+    func removeFormatStrings(_ inputString: String) -> String {
+        removeFormatStringsCalled = true
 
         return inputString
     }
