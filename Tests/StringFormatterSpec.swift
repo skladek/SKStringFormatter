@@ -135,8 +135,8 @@ class StringFormatterSpec: QuickSpec {
                 }
 
                 it("Should allow any characters if the allowedCharacterSet is nil") {
-                    let _ = textField.delegate?.textField!(textField, shouldChangeCharactersIn: NSMakeRange(0, 0), replacementString: "A5%∂✅")
-                    expect(textField.text).to(equal("1234A5%∂✅"))
+                    let _ = textField.delegate?.textField!(textField, shouldChangeCharactersIn: NSMakeRange(0, 0), replacementString: "A5%")
+                    expect(textField.text).to(equal("1234A5%"))
                 }
             }
         }
