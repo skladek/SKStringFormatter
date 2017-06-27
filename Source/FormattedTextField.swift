@@ -1,11 +1,3 @@
-//
-//  FormattedTextField.swift
-//  SKStringFormatter
-//
-//  Created by Sean on 6/15/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import UIKit
 
 /// A text field designed to be used with formatted strings. This prevents the cursor from
