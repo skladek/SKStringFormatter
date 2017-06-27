@@ -1,11 +1,3 @@
-//
-//  StringTransformer.swift
-//  SKStringFormatter
-//
-//  Created by Sean on 6/22/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import Foundation
 
 protocol Transforming {
