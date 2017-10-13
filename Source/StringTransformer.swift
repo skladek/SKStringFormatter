@@ -49,7 +49,7 @@ class StringTransformer: Transforming {
             if let lowerBound = outputString.index(startIndex, offsetBy: Int(formatString.startIndex), limitedBy: endIndex) {
                 if let upperBound = outputString.index(lowerBound, offsetBy: formatString.string.characters.count, limitedBy: endIndex) {
                     let formatRange = lowerBound..<upperBound
-                    let substring = outputString.substring(with: formatRange)
+                    let substring = String(outputString[formatRange])
                     if substring == formatString.string {
                         outputString = outputString.replacingCharacters(in: formatRange, with: "")
                     }
@@ -79,7 +79,7 @@ class StringTransformer: Transforming {
 
         let stringStartIndex = inputString.startIndex
         let endIndex = inputString.index(stringStartIndex, offsetBy: format.maxLength)
-        let outputString = inputString.substring(to: endIndex)
+        let outputString = String(inputString[..<endIndex])
 
         return outputString
     }
